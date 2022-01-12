@@ -49,7 +49,7 @@ public class AirplaneTest {
 
     @Feature("Entertainment")
     @Severity(SeverityLevel.MINOR)
-    @Test(priority = 2)
+    @Test(priority = 2, enabled = false)
     public void entertainmentSystem() {
         //Dummy code
         int coverage = 100;
