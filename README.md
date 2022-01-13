@@ -1,63 +1,46 @@
 
 ## Allure TestNG Example
 
-### Getting Started
+### Atenção
+Para fins didático e de exploração do Allure, um teste está falhando para que sai com erro no relatório.
 
-To generate Allure Report you should perform following steps:
+### Como iniciar
+
+Siga os passos abaixo ou acesse diretamente a documentação em inglês [aqui](https://github.com/allure-examples/allure-testng-example).
 
 ```bash
-$ git clone git@github.com:allure-examples/allure-testng-example.git
-$ ./mvnw clean test site
+$ git clone https://github.com/luizgustavocosta/allure-testng-example.git
+$ ./mvnw clean test -Dmaven.test.failure.ignore=true site
 ```
 
-Report will be generated to `target/site/allure-maven-plugin` folder. To open the report you can use the following command:
+O relatório será gerado na pasta `target/site/allure-maven-plugin`. 
+Para abrir via linha de comando o relatório use o comando abaixo
 
 ```bash
 $ ./mvnw io.qameta.allure:allure-maven:serve
 ```
 
-There is another way of generating the report. The generated report can be opened here "target/site/allure-maven-plugin/index.html". The command to generate the report is the following:
+Ou use o comando abaixo para gerar e depois abra o arquivo "target/site/allure-maven-plugin/index.html".
 
 ```bash
 $ ./mvnw io.qameta.allure:allure-maven:report
 ```
 
-### Tests selective run (filtering)
+### Use GitHub Actions para adicionar o relatório
+Com GitHub Actions, use a action dentro da pasta ```.github/worksflows/allure-testng.yml``` como exemplo.
 
-This feature works when you are triggering a build from Allure TestOps by selecting seperate test cases (not all in your project).
+Dentro do repositório, associe a branche ```gh_pages``` para servir de página do projeto e estará disponível seu relatório no GitHub e gerado com Allure + TestNG + GitHub Actions
 
-Allure TestOps agent creates **testplan.json** file  with the list of tests on CI, then the test framework adaptor reads the content and makes the seletion of the tests to be executed.
+![img.png](static/ConfigGH_Pages.png)
 
-#### Requirements
+![img.png](static/Actions_GH_Pages.png)
 
-Allure framework libraries not earlier than 2.13.9
+![img.png](static/Allure_Report.png)
 
-#### How to check locally
-
-For this particular exapmple we have **testplan.json** with the following content:
-
-```JSON
-{ "version": "1.0", "tests": [{ "id": 11111, "selector": "my.company.SimpleTest.simpleTestOne" }] }
-```
-So, we expect only `simpleTestOne` test to be executed.
-
-##### Steps
-
-In the terminal type the following:
-```bash
-export ALLURE_TESTPLAN_PATH=testplan.json
-# just to check the variable was created 
-echo $ALLURE_TESTPLAN_PATH
-./mvnw clean test
-```
-
-TestNG will execute only one test of the two tests present in this example project.
-
-
-
-### More
-
-* [Documentation](https://docs.qameta.io/allure/2.0/)
-* [Issue Tracking](https://github.com/allure-framework/allure2/issues?labels=&milestone=&page=1&state=open)
-* Gitter chat room: [https://gitter.im/allure-framework/allure-core](https://gitter.im/allure-framework/allure-core)
-* StackOverflow tag: [Allure](http://stackoverflow.com/questions/tagged/allure)
+### Tech stack
+- Java
+- Allure
+- TestNG
+- Maven
+- Git
+- GitHub Actions
