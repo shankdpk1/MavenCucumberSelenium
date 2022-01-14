@@ -38,15 +38,6 @@ public class AirplaneTest {
         Assert.assertTrue(condition);
     }
 
-    @Severity(SeverityLevel.CRITICAL)
-    @Feature("Safety")
-    @Test
-    public void radio() {
-        //Dummy code
-        boolean works = true;
-        Assert.assertTrue(works);
-    }
-
     @Feature("Entertainment")
     @Severity(SeverityLevel.MINOR)
     @Test(priority = 2, enabled = false)

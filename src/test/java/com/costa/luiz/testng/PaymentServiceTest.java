@@ -43,6 +43,13 @@ public class PaymentServiceTest {
         Assert.assertTrue(nonNull(type) && content.startsWith("Payment"));
     }
 
+    @Feature("Communication")
+    @Test
+    void sendCommunication() {
+        // Dummy test
+        Assert.assertNotNull("New loan available");
+    }
+
     @DataProvider(name = "messageProvider")
     public Object[][] createMessages() {
         return new Object[][]{
