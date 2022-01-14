@@ -2,9 +2,9 @@
 ## Allure TestNG Example
 
 ### Atenção
-Para fins didático e de exploração do Allure, um teste está falhando para que sai com erro no relatório.
+:stop_sign: Para fins didático e de exploração do Allure, um teste está falhando :trollface: para que sai com erro no relatório.
 
-### Como iniciar
+### Como iniciar?
 
 Siga os passos abaixo ou acesse diretamente a documentação em inglês [aqui](https://github.com/allure-examples/allure-testng-example).
 
@@ -13,7 +13,7 @@ $ git clone https://github.com/luizgustavocosta/allure-testng-example.git
 $ ./mvnw clean test -Dmaven.test.failure.ignore=true site
 ```
 
-O relatório será gerado na pasta `target/site/allure-maven-plugin`. 
+O :page_facing_up: relatório será gerado na pasta `target/site/allure-maven-plugin`. 
 Para abrir via linha de comando o relatório use o comando abaixo
 
 ```bash
@@ -44,3 +44,4 @@ Dentro do repositório, associe a branche ```gh_pages``` para servir de página 
 - Maven
 - Git
 - GitHub Actions
+- Conventional Commits
