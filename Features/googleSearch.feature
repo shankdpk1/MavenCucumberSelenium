@@ -7,4 +7,3 @@ Scenario: Test Google Seaerch
 	Then Google is open
 	When Searching Selenium
 	Then Selenium is searched successfully
-	
