@@ -19,11 +19,11 @@ pipeline {
         }
         stage('Test') {
             
-            when{
-                expression{
-                    BRANCH_NAME == 'master' && CODE_CHANGES == true
-                }
-            }
+//             when{
+//                 expression{
+//                     BRANCH_NAME == 'master' && CODE_CHANGES == true
+//                 }
+//             }
             
             steps {
                  echo 'Testing App'
