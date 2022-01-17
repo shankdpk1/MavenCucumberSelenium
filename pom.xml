@@ -8,6 +8,7 @@
     <artifactId>MavenCucumberSelenium</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    
     <!-- Keeping plugins apache inside build and plugin tags -->
     <build>
         <plugins>
