@@ -7,7 +7,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 8943331100,
+  "duration": 14913751400,
   "status": "passed"
 });
 formatter.scenario({
@@ -48,32 +48,32 @@ formatter.match({
   "location": "Steps.Launch_Browser()"
 });
 formatter.result({
-  "duration": 356458600,
+  "duration": 190384700,
   "status": "passed"
 });
 formatter.match({
   "location": "Steps.Google_is_open()"
 });
 formatter.result({
-  "duration": 2587978300,
+  "duration": 6832257500,
   "status": "passed"
 });
 formatter.match({
   "location": "Steps.Searching_Selenium()"
 });
 formatter.result({
-  "duration": 1849807500,
+  "duration": 1847463000,
   "status": "passed"
 });
 formatter.match({
   "location": "Steps.Selenium_is_searched_successfully()"
 });
 formatter.result({
-  "duration": 10479300,
+  "duration": 5627600,
   "status": "passed"
 });
 formatter.after({
-  "duration": 1719887600,
+  "duration": 1251389100,
   "status": "passed"
 });
 });
