@@ -19,11 +19,11 @@ pipeline {
         }
         stage('Test') {
             
-            // when{
-            //     expression{
-            //         BRANCH_NAME == 'master' && CODE_CHANGES == true
-            //     }
-            // }
+            when{
+                expression{
+                    BRANCH_NAME == 'master' && CODE_CHANGES == true
+                }
+            }
             
             steps {
                  echo 'Testing App'
@@ -44,6 +44,8 @@ pipeline {
                 // If Maven was able to run the tests, even if some of the test
                 // failed, record the test results and archive the jar file.
                 success {
+                    
+                    echo 'i am in success'
                     junit '**/target/surefire-reports/TEST-*.xml'
                     archiveArtifacts 'target/*.jar'
                 }
