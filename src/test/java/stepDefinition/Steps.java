@@ -54,6 +54,7 @@ public class Steps extends BaseClass {
     @When("^Searching Selenium$")
     public void Searching_Selenium() throws Throwable {
 	System.out.println("page title is "+driver.getTitle());
+	    System.out.println("master");
 
 	gh.enterSearchingData("Selenium");
     Thread.sleep(500);
