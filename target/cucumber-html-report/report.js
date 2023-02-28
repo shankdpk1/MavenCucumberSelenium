@@ -1,79 +1,55 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("C:/Users/shash/Maven/MavenCucumberSelenium/Features/googleSearch.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("test.feature");
 formatter.feature({
   "line": 1,
-  "name": "Test Google",
+  "name": "Test",
   "description": "",
-  "id": "test-google",
+  "id": "test",
   "keyword": "Feature"
-});
-formatter.before({
-  "duration": 14913751400,
-  "status": "passed"
 });
 formatter.scenario({
   "line": 4,
-  "name": "Test Google Seaerch",
+  "name": "Test11",
   "description": "",
-  "id": "test-google;test-google-seaerch",
+  "id": "test;test11",
   "type": "scenario",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "line": 3,
-      "name": "@regression"
-    }
-  ]
+  "keyword": "Scenario"
 });
 formatter.step({
-  "line": 6,
-  "name": "Launch Browser",
+  "line": 5,
+  "name": "print msg",
   "keyword": "Given "
 });
-formatter.step({
-  "line": 7,
-  "name": "Google is open",
-  "keyword": "Then "
+formatter.match({
+  "location": "Steps.printMsg()"
 });
-formatter.step({
-  "line": 8,
-  "name": "Searching Selenium",
-  "keyword": "When "
+formatter.result({
+  "duration": 185216500,
+  "status": "passed"
 });
-formatter.step({
+formatter.scenario({
+  "comments": [
+    {
+      "line": 6,
+      "value": "#    Then print msg1"
+    }
+  ],
   "line": 9,
-  "name": "Selenium is searched successfully",
-  "keyword": "Then "
+  "name": "Test12",
+  "description": "",
+  "id": "test;test12",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 10,
+  "name": "print msg",
+  "keyword": "Given "
 });
 formatter.match({
-  "location": "Steps.Launch_Browser()"
+  "location": "Steps.printMsg()"
 });
 formatter.result({
-  "duration": 190384700,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Steps.Google_is_open()"
-});
-formatter.result({
-  "duration": 6832257500,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Steps.Searching_Selenium()"
-});
-formatter.result({
-  "duration": 1847463000,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Steps.Selenium_is_searched_successfully()"
-});
-formatter.result({
-  "duration": 5627600,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 1251389100,
+  "duration": 258600,
   "status": "passed"
 });
 });
