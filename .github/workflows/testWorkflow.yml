@@ -24,6 +24,11 @@ jobs:
           distribution: temurin
           java-version: 8
 
+      - name: maven restore
+        uses: skjolber/maven-cache-github-action@v1
+        with:
+          step: restore
+
       - name: run
         run: mvn clean compile test
 
