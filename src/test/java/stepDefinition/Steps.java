@@ -15,6 +15,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import pageObjects.GoogleHome;
+import io.qameta.allure.*;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -170,8 +171,8 @@ public class Steps extends BaseClass {
         System.out.println("hi");
     }
 
-    @Then("print msg1")
-    public void printMsg1() {
+    @Then("go check")
+    public void gocheck() {
         System.out.println("hqi");
     }
 }

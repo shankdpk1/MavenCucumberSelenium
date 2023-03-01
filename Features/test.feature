@@ -3,7 +3,7 @@ Feature: Test
 
   Scenario: Test11
     Given print msg
-#    Then print msg1
+#    Then go check
 
 
   Scenario: Test12
