@@ -23,14 +23,14 @@ formatter.match({
   "location": "Steps.printMsg()"
 });
 formatter.result({
-  "duration": 213777600,
+  "duration": 163524700,
   "status": "passed"
 });
 formatter.scenario({
   "comments": [
     {
       "line": 6,
-      "value": "#    Then print msg1"
+      "value": "#    Then go check"
     }
   ],
   "line": 9,
@@ -49,7 +49,7 @@ formatter.match({
   "location": "Steps.printMsg()"
 });
 formatter.result({
-  "duration": 99300,
+  "duration": 137500,
   "status": "passed"
 });
 });

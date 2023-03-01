@@ -43,7 +43,7 @@ jobs:
       - name: Create Playwright Test Results History
         uses: PavanMudigonda/allure-html-reporter-github-pages@v1.0
         if: always()
-        id: allure-report
+#        id: allure-report
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           WORKFLOW_ID: main.yml
