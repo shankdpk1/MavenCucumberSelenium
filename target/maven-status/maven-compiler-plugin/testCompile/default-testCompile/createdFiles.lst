@@ -3,6 +3,9 @@ stepDefinition\Steps$1$1.class
 stepDefinition\BaseClass.class
 stepDefinition\Steps$1.class
 stepDefinition\Steps.class
+testng\AirplaneTest.class
+testng\SpaceShipTest.class
 utilities\WaitHelper.class
 stepDefinition\Steps$1$2.class
+testng\PaymentServiceTest.class
 runner\TestRunner.class
