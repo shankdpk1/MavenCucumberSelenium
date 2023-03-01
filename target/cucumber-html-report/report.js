@@ -23,7 +23,7 @@ formatter.match({
   "location": "Steps.printMsg()"
 });
 formatter.result({
-  "duration": 184064600,
+  "duration": 123692500,
   "status": "passed"
 });
 formatter.scenario({
@@ -34,9 +34,9 @@ formatter.scenario({
     }
   ],
   "line": 9,
-  "name": "Test12",
+  "name": "Test1212",
   "description": "",
-  "id": "test;test12",
+  "id": "test;test1212",
   "type": "scenario",
   "keyword": "Scenario"
 });
@@ -49,7 +49,27 @@ formatter.match({
   "location": "Steps.printMsg()"
 });
 formatter.result({
-  "duration": 83800,
+  "duration": 76100,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 12,
+  "name": "Test12",
+  "description": "",
+  "id": "test;test12",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 13,
+  "name": "print msg",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "Steps.printMsg()"
+});
+formatter.result({
+  "duration": 75800,
   "status": "passed"
 });
 });
