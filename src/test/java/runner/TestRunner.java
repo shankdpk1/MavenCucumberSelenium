@@ -25,7 +25,8 @@ import org.junit.runners.Parameterized;
 //                tags={"@regression111"}
                         "rerun:target/rerun.txt"           //Creates a text file with failed scenarios
 
-                }
+                },
+                monochrome = true
         )
 
 
