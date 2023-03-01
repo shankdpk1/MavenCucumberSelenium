@@ -1,6 +1,9 @@
-name: allure-junit5-maven
-
-on: [ push ]
+name: foreignproject
+on:
+  #  push:
+  #    branches:
+  #      - 'master'
+  #  pull_request:
   workflow_dispatch:
 
 jobs:
