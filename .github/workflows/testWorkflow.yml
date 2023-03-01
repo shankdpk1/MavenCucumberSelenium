@@ -1,8 +1,8 @@
 name: example-basic
 on:
-  #  push:
-  #    branches:
-  #      - 'master'
+  push:
+    branches:
+      - 'master'
   #  pull_request:
   workflow_dispatch:
 
@@ -10,10 +10,10 @@ jobs:
   # ~~~~~~~~~~~~~~~~~~ Cypress v9 and below (using Legacy configuration) ~~~~~~~~~~~~~~~~~~~ #
 
   basic-ubuntu-20-v9:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
       #      - name: pull project
       #        uses: actions/checkout@v3
@@ -24,60 +24,61 @@ jobs:
           distribution: temurin
           java-version: 8
 
-      - name: maven restore
-        uses: skjolber/maven-cache-github-action@v1
-        with:
-          step: restore
+      #      - name: maven restore
+      #        uses: skjolber/maven-cache-github-action@v1
+      #        with:
+      #          step: restore
 
       - name: run
-        run: mvn clean compile test
+        run: mvn clean verify -Dtestng.dtd.http=true
 
-      - name: Get Allure history
-        uses: actions/checkout@v3
-        if: always()
-        continue-on-error: true
-        with:
-          ref: gh-pages
-          path: gh-pages
-
-      - name: Create Playwright Test Results History
-        uses: PavanMudigonda/allure-html-reporter-github-pages@v1.0
-        if: always()
-#        id: allure-report
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          WORKFLOW_ID: main.yml
-          allure_results: allure-results
-          gh_pages: gh-pages
-          allure_report: allure-report
-          allure_history: allure-history
-
-      - name: Build
-        run: |-
-          docker build . -t allure-gen
-          docker run -v ${PWD}:/github/workspace allure-gen allure-results allure-report
-
-      - uses: deblockt/cucumber-report-annotations-action@v1.7
-        with:
-          access-token: ${{ secrets.GITHUB_TOKEN }}
-          path: "**/cucumber-report.json"
-
-      - name: Test marketplace action
-        uses: simple-elf/allure-report-action@master
-        if: always()
-        id: allure-report
-        with:
-          #          allure_results: build/allure-results
-          allure_results: target/allure-results
-          gh_pages: gh-pages
-          allure_report: allure-report
-          allure_history: allure-history
-          keep_reports: 30
+      #      - name: Get Allure history
+      #        uses: actions/checkout@v3
+      #        if: always()
+      #        continue-on-error: true
+      #        with:
+      #          ref: gh-pages
+      #          path: gh-pages
+      #
+      #      - name: Create Playwright Test Results History
+      #        uses: PavanMudigonda/allure-html-reporter-github-pages@v1.0
+      #        if: always()
+      ##        id: allure-report
+      #        with:
+      #          token: ${{ secrets.GITHUB_TOKEN }}
+      #          WORKFLOW_ID: main.yml
+      #          allure_results: allure-results
+      #          gh_pages: gh-pages
+      #          allure_report: allure-report
+      #          allure_history: allure-history
+      #
+      #      - name: Build
+      #        run: |-
+      #          docker build . -t allure-gen
+      #          docker run -v ${PWD}:/github/workspace allure-gen allure-results allure-report
+      #
+      #      - uses: deblockt/cucumber-report-annotations-action@v1.7
+      #        with:
+      #          access-token: ${{ secrets.GITHUB_TOKEN }}
+      #          path: "**/cucumber-report.json"
+      #
+      #      - name: Test marketplace action
+      #        uses: simple-elf/allure-report-action@master
+      #        if: always()
+      #        id: allure-report
+      #        with:
+      #          #          allure_results: build/allure-results
+      #          allure_results: target/allure-results
+      #          gh_pages: gh-pages
+      #          allure_report: allure-report
+      #          allure_history: allure-history
+      #          keep_reports: 30
 
       - name: Deploy report to Github Pages
         if: always()
-        uses: peaceiris/actions-gh-pages@v2
+        uses: peaceiris/actions-gh-pages@v3
         env:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: allure-history
+          #          PUBLISH_BRANCH: gh-pages
+          #          PUBLISH_DIR: allure-history
+          PUBLISH_DIR: ./target/cucumber-html-report
