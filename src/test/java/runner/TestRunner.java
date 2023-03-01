@@ -11,7 +11,10 @@ import org.junit.runners.Parameterized;
 //        features="features",
 //        features="C:\\Users\\shash\\Maven\\MavenCucumberSelenium\\Features\\googleSearch2.feature",
 //                features={"C:\\Users\\shash\\Maven\\MavenCucumberSelenium\\Features\\googleSearch.feature","C:\\Users\\shash\\Maven\\MavenCucumberSelenium\\Features\\googleSearch2.feature"},
-                features = {"C:\\Users\\shash\\Maven\\MavenCucumberSelenium\\Features"},
+
+//                features = {"C:\\Users\\shash\\Maven\\MavenCucumberSelenium\\Features"},
+
+                features = {"Features"},
                 glue = "stepDefinition",
 //        dryRun = true,
 //                monochrome = true,
