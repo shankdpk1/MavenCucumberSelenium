@@ -81,5 +81,5 @@ jobs:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
           #          PUBLISH_DIR: ./target/allure-results
-          PUBLISH_DIR: allure-history
-#          PUBLISH_DIR: ./target/cucumber-html-report
+#          PUBLISH_DIR: allure-history
+          PUBLISH_DIR: ./target/cucumber-html-report
