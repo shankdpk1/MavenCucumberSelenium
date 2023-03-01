@@ -23,7 +23,7 @@ formatter.match({
   "location": "Steps.printMsg()"
 });
 formatter.result({
-  "duration": 56676357,
+  "duration": 56425046,
   "status": "passed"
 });
 formatter.scenario({
@@ -49,7 +49,7 @@ formatter.match({
   "location": "Steps.printMsg()"
 });
 formatter.result({
-  "duration": 122603,
+  "duration": 397501,
   "status": "passed"
 });
 formatter.scenario({
@@ -69,7 +69,7 @@ formatter.match({
   "location": "Steps.printMsg()"
 });
 formatter.result({
-  "duration": 98902,
+  "duration": 383701,
   "status": "passed"
 });
 });
